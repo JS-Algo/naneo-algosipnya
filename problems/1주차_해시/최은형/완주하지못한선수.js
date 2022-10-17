@@ -1,3 +1,4 @@
+// 최대 32ms
 function solution(participants, completions) {
     let answer = '';
     let hash = new Map(); // 참가자 맵
@@ -24,5 +25,21 @@ function solution(participants, completions) {
     return answer;
 }
 
-// 너무 느림... 반복문 두개로 줄여볼 것...
-// 1. 반복문 2
+// 최대 42ms
+function solution(participants, completions) {
+    let hash = new Map(); // 참가자 맵
+    
+    participants.forEach((participant) => {
+        hash.has(participant) ?
+            hash.set(participant, hash.get(participant) + 1) :
+            hash.set(participant, 1);
+    });
+    
+    completions.forEach((completion) => {
+        hash.get(completion) == 1 ?
+            hash.delete(completion) :
+            hash.set(completion, hash.get(completion) - 1);
+    });
+    
+    return [...hash][0][0];
+}
