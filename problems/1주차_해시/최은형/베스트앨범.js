@@ -17,7 +17,7 @@ function solution(genres, plays) {
         Array.from(b[1].values()).reduce((a, b) => a + b, 0) - Array.from(a[1].values()).reduce((a, b) => a + b, 0)
     )));
     
-    hash.forEach((value, key) => {
+    hash.forEach((value) => {
         const arr = Array.from(value.keys())
         answer.push(arr[0]);
         if(value.size > 1){
