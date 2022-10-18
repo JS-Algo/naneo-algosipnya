@@ -8,11 +8,9 @@ function solution(participant, completion) {
   }
 
   for (let c of completion) {
-    if (hashMap.get(c) === 1) {
-      hashMap.delete(c);
-    } else {
-      hashMap.set(c, hashMap.get(c) - 1);
-    }
+    hashMap.get(c) === 1
+      ? hashMap.delete(c)
+      : hashMap.set(c, hashMap.get(c) - 1);
   }
 
   for (let [key, value] of hashMap) {
