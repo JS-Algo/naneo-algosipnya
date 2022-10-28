@@ -3,3 +3,5 @@ function solution(numbers) {
     
     return parseInt(numbers.join('')) === 0 ? "0" : numbers.join('');
 }
+
+// https://change-words.tistory.com/64
