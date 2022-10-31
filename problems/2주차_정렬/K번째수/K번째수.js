@@ -9,4 +9,4 @@ function solution(array, commands) {
   return answer;
 }
 
-// 테스트 2번 아직 통과 못함,, 계속 시도중
+// 테스트 2번 해냄!! [CompareFunction] 에 대해 배웠다.
