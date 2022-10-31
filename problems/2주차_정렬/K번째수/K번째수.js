@@ -3,7 +3,7 @@ function solution(array, commands) {
 
   for (let command of commands) {
     let sliceArray = array.slice(command[0] - 1, command[1]);
-    sliceArray.sort();
+    sliceArray.sort((a, b) => a - b);
     answer.push(sliceArray[command[2] - 1]);
   }
   return answer;
