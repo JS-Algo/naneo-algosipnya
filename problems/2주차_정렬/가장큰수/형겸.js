@@ -6,5 +6,5 @@ function solution(numbers) {
 
   answer = strNumbers.join(""); // 정렬된 문자를 join("") 을 이용해 문자로 합치기
 
-  return numbers[0] === "0" ? "0" : answer; // 배열의 요소가 모두 0인 경우 예외처리
+  return answer[0] === "0" ? "0" : answer; // 배열의 요소가 모두 0인 경우 예외처리
 }
