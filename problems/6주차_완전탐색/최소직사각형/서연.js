@@ -13,8 +13,8 @@
 // }
 
 function solution(sizes) {
-  let horizontal = 1;
-  let vertical = 1;
+  let horizontal = 0;
+  let vertical = 0;
   sizes.forEach((el) => {
     if (horizontal < Math.max(...el)) horizontal = Math.max(...el);
     if (vertical < Math.min(...el)) vertical = Math.min(...el);
